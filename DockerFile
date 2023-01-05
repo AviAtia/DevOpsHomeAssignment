@@ -1,0 +1,5 @@
+FROM python:3.7.15-slim-buster as base
+
+ENTRYPOINT ["/bin/bash", "-l", "-c"]
+
+CMD ["python src/main.py"]
