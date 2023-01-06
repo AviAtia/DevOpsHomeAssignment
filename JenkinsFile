@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo pwd
-                docker build -f DockerFile . -t home_ass
+                docker build -f DockerFile
             }
         }
         stage('Test') {
