@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo pwd
-                docker build -f DockerFile
+                docker.exe build -f DockerFile
             }
         }
         stage('Test') {
