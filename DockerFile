@@ -1,5 +1,10 @@
 FROM python:3.7.15-slim-buster as base
 
-ENTRYPOINT ["/bin/bash", "-l", "-c"]
+COPY . /DevOpsHomeAssignment
+WORKDIR /DevOpsHomeAssignment
 
-CMD ["python src/main.py"]
+RUN pip install -r requirements.txt
+
+EXPOSE 5000
+
+CMD ["python", "main.py"]
